@@ -1,8 +1,7 @@
 # CS4416-Database-Systems-Project-2024
-Concerts
+##Concerts
 
-## Task 1 
-# DONE
+## Task 1 | DONE - Igor
 Propose a modified schema to eliminate data redundancy and support: 
 • multiple artists per album, song, and concert 
 • multiple favourite artists per fan 
@@ -14,25 +13,26 @@ the tables of the modified schema. Please provide data for at least two artists,
 albums, at least 2 concerts ad at least 2 fans who have purchased tickets for concerts.
 
 
-## Task 2
+## Task 2 | ... - ???
 Draw an entity-relationship diagram (ERD) for the modified schema using crow’s foot notation.
 
-## Task 3
+## Task 3 | ... - ???
 Create a view for the modified schema. The view must use a join and both GROUP BY and 
 HAVING clauses. Aim at demonstrating advanced SQL skills. 
 
-## Task 4
+## Task 4 | ... - ???
 Write one BEFORE and one AFTER trigger for the modified schema.
 
-## Task 5
+## Task 5 | ... - ???
 Write a stored function that returns the total number of occupied seats for a given concert_id. 
 
-## Task 6
+## Task 6 | ... - ???
 Write a stored procedure that checks whether a given song_id is associated with a given 
 album_id. If not, insert this association into the database. Additionally, adjust the song’s release 
 date if it is later than the album’s.
 
-## Task 7
+## Task 7 | ... - EVERYONE
+#  [Google Docs Report]([https://pages.github.com/](https://docs.google.com/document/d/1QgfWoZlhya0yBCpckxbMk_S3UjvtNyetlc9o-hZ9ANs/edit?usp=sharing))
 Write a report with the following sections and save it as report.pdf.  
 Sections: 
 1. Contribution breakdown of each group member. If not provided, all members will 
