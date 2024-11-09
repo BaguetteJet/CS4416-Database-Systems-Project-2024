@@ -1,5 +1,7 @@
 # CS4416-Database-Systems-Project-2024
-##Concerts
+
+## DEADLINE 18:00 on Friday week 12
+<img src="https://i.countdownmail.com/3p1e6t.gif" border="0" alt="countdownmail.com"/>
 
 ## Task 1 | DONE - Igor
 **> part 1**  
@@ -36,7 +38,7 @@ album_id. If not, insert this association into the database. Additionally, adjus
 date if it is later than the album’s.
 
 ## Task 7 | ... - EVERYONE
-#  [Google Docs Report]([https://pages.github.com/](https://docs.google.com/document/d/1QgfWoZlhya0yBCpckxbMk_S3UjvtNyetlc9o-hZ9ANs/edit?usp=sharing))
+#   [Google Docs Report](https://docs.google.com/document/d/1QgfWoZlhya0yBCpckxbMk_S3UjvtNyetlc9o-hZ9ANs/edit?usp=sharing)
 Write a report with the following sections and save it as report.pdf.  
 Sections: 
 1. Contribution breakdown of each group member. If not provided, all members will 
@@ -55,12 +57,9 @@ function, and procedure. Propose indexes and discuss use cases in which the
 proposed indexes are disadvantageous.
 
 ## Submission 
-Submit the four files: 
-a. modified_concerts_schema.sql (Task 1) 
-b. data.sql (Task 1) 
-c. code.sql containing the CREATE statements for your view, triggers, function and procedure 
-(Tasks 3-6) 
-d. report.pdf (Task 7) 
-
- ## DEADLINE 18:00 on Friday week 12
-<img src="https://i.countdownmail.com/3p1e6t.gif" border="0" alt="countdownmail.com"/>
+Submit the four files:  
+a. modified_concerts_schema.sql (Task 1)   
+b. data.sql (Task 1)   
+c. code.sql containing the CREATE statements for your view, triggers, function and procedure   
+(Tasks 3-6)
+d. report.pdf (Task 7)    
