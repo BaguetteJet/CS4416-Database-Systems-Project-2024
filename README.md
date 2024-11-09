@@ -8,18 +8,18 @@ database schema in concerts_schema.sql.
 This is the schema of a relational database that contains data about artists (incl. bands), their songs, 
 albums and concerts. It also contains data about fans and tickets they have purchased for concerts. 
   
-## Task 1 | DONE - Igor
-**> part 1**  
+## Task 1 | DONE - mostly Igor
+**> part 1** - group decision  
 Propose a modified schema to eliminate data redundancy and support: 
 - multiple artists per album, song, and concert 
 - multiple favourite artists per fan 
 - shared tickets, i.e. multiple fans per ticket_id
   
-**> part 2**  
+**> part 2** - Igor  
 Write all CREATE TABLE statements for the modified schema, including PRIMARY KEY and 
 FOREIGN KEY constraints, and save them in modified_concerts_schema.sql.  
   
-**> part 3**  
+**> part 3**- Igor  
 In a separate file named data.sql, provide INSERT INTO statements for inserting some data into 
 the tables of the modified schema. Please provide data for at least two artists, at least two 
 albums, at least 2 concerts ad at least 2 fans who have purchased tickets for concerts.
