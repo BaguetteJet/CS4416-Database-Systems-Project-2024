@@ -2,15 +2,16 @@
 ##Concerts
 
 ## Task 1 | DONE - Igor
-**Task 1, part 1**
+**> part 1**
 Propose a modified schema to eliminate data redundancy and support: 
 - multiple artists per album, song, and concert 
 - multiple favourite artists per fan 
-- shared tickets, i.e. multiple fans per ticket_id  
-**Task 1, part 2**
+- shared tickets, i.e. multiple fans per ticket_id
+  
+**> part 2**
 Write all CREATE TABLE statements for the modified schema, including PRIMARY KEY and 
 FOREIGN KEY constraints, and save them in modified_concerts_schema.sql.  
-**Task 1, part 3**
+**> part 3**
 In a separate file named data.sql, provide INSERT INTO statements for inserting some data into 
 the tables of the modified schema. Please provide data for at least two artists, at least two 
 albums, at least 2 concerts ad at least 2 fans who have purchased tickets for concerts.
