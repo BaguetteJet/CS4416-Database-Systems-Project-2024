@@ -19,7 +19,7 @@ Propose a modified schema to eliminate data redundancy and support:
 Write all CREATE TABLE statements for the modified schema, including PRIMARY KEY and 
 FOREIGN KEY constraints, and save them in modified_concerts_schema.sql.  
   
-**> part 3**- Igor  
+**> part 3** - Igor  
 In a separate file named data.sql, provide INSERT INTO statements for inserting some data into 
 the tables of the modified schema. Please provide data for at least two artists, at least two 
 albums, at least 2 concerts ad at least 2 fans who have purchased tickets for concerts.
