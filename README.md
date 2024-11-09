@@ -2,7 +2,12 @@
 
 ## DEADLINE 18:00 on Friday week 12
 <img src="https://i.countdownmail.com/3p1e6t.gif" border="0" alt="countdownmail.com"/>
-
+  
+This is a group project. A group must consist of either 4 or 5 students. Consider the relational 
+database schema in concerts_schema.sql. 
+This is the schema of a relational database that contains data about artists (incl. bands), their songs, 
+albums and concerts. It also contains data about fans and tickets they have purchased for concerts. 
+  
 ## Task 1 | DONE - Igor
 **> part 1**  
 Propose a modified schema to eliminate data redundancy and support: 
@@ -37,8 +42,8 @@ Write a stored procedure that checks whether a given song_id is associated with 
 album_id. If not, insert this association into the database. Additionally, adjust the song’s release 
 date if it is later than the album’s.
 
-## Task 7 | ... - EVERYONE
-#   [Google Docs Report](https://docs.google.com/document/d/1QgfWoZlhya0yBCpckxbMk_S3UjvtNyetlc9o-hZ9ANs/edit?usp=sharing)
+## Task 7 | ... - EVERYONE  
+[Google Docs Report](https://docs.google.com/document/d/1QgfWoZlhya0yBCpckxbMk_S3UjvtNyetlc9o-hZ9ANs/edit?usp=sharing)  
 Write a report with the following sections and save it as report.pdf.  
 Sections: 
 1. Contribution breakdown of each group member. If not provided, all members will 
@@ -60,6 +65,6 @@ proposed indexes are disadvantageous.
 Submit the four files:  
 a. modified_concerts_schema.sql (Task 1)   
 b. data.sql (Task 1)   
-c. code.sql containing the CREATE statements for your view, triggers, function and procedure   
-(Tasks 3-6)
+c. code.sql containing the CREATE statements for your view, triggers, function and procedure
+(Tasks 3-6)   
 d. report.pdf (Task 7)    
