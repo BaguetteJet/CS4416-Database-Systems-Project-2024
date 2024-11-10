@@ -66,7 +66,6 @@ INSERT INTO artist_to_concert (artist_id, concert_id) VALUES
 (213700, 300657), -- Lady Gaga, The Fame Ball Tour
 (270503, 300458), -- Eminem, Fortnite x Eminem
 (290065, 300173), -- Pharrell Williams
-(202854, 300173), -- DaftPunk
 (202854, 300468); -- DaftPunk, Daftendirektour
 
 -- int(10), int(10), tinyint(4)
