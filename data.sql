@@ -57,12 +57,17 @@ INSERT INTO artist_to_song (artist_id, song_id) VALUES
 -- int(10), varchar(256), varchar(256), date(yyyy-mm-dd)
 INSERT INTO concerts (concert_id, concert_title, location, date_of_concert) VALUES
 (300458, 'Fortnite x Eminem', 'Worldwide', '2023-12-02'),
-(300657, 'The Fame Ball Tour', 'United States', '2009-03-12');
+(300657, 'The Fame Ball Tour', 'United States', '2009-03-12'),
+(300468, 'Daftendirektour', 'WorldWide', '1997-10-02'),
+(300173, 'Pharrell Williams', 'England', '2014-07-14');
 
 -- int(10), int(10)
 INSERT INTO artist_to_concert (artist_id, concert_id) VALUES
 (213700, 300657), -- Lady Gaga, The Fame Ball Tour
-(270503, 300458); -- Eminem, Fortnite x Eminem
+(270503, 300458), -- Eminem, Fortnite x Eminem
+(290065, 300173), -- Pharrell Williams
+(202854, 300173), -- DaftPunk
+(202854, 300468); -- DaftPunk, Daftendirektour
 
 -- int(10), int(10), tinyint(4)
 INSERT INTO concert_to_songs (concert_id, song_id, order_performance) VALUES
@@ -70,13 +75,19 @@ INSERT INTO concert_to_songs (concert_id, song_id, order_performance) VALUES
 (300458, 200305, 2), -- Fortnite x Eminem, Venom
 (300657, 200968, 1), -- The Fame Ball Tour, Just Dance
 (300657, 200456, 2), -- The Fame Ball Tour, Poker Face
-(300657, 200987, 3); -- The Fame Ball Tour, Paparazzi
+(300657, 200987, 3), -- The Fame Ball Tour, Paparazzi
+(300468, 200123, 1), -- Pharrell Williams, Get Lucky
+(300468, 200047, 1), -- Daftendirektour, Touch
+(300468, 200374, 2), -- Daftendirektour, Beyond
+(300468, 200503, 3); -- Daftendirektour, Around the World
 
 -- int(10), int(10), date(yyyy-mm-dd), double
 INSERT INTO concert_tickets (ticket_id, concert_id, purchase_date, ticket_price) VALUES
 (444044, 300458, '2023-12-01', 0.00),
 (465087, 300657, '2009-02-12', 450.50),
-(467890, 300657, '2009-01-10', 999.99);
+(467890, 300657, '2009-01-10', 999.99),
+(418198, 200123, '2014-07-06', 123.45),
+(490127, 200047, '1997-09-27', 67.80);
 
 -- int(10), varchar(128), varchar(128), tinyint(3)
 INSERT INTO fans (fan_id, fan_name, fan_email, age) VALUES
