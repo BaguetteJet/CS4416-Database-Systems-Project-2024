@@ -19,5 +19,5 @@ INSERT INTO ticket_to_fan (ticket_id, fan_id, seat_zone, seat_number) VALUES
 (418198, 502374, 'Left Stage', 'L567'), -- Lewis Kubica, Pharrell Williams
 (419870, 508976, 'Left Stage', 'L542'), -- Michael French, Pharrell Williams
 (420167, 507454, 'Upper Left Stage', 'LU432'), -- David Guillfoyle, Pharrell Williams
-(489159, 501967, 'VIP Box', 'V5') -- Donald Womp, Dafetendirektour
+(489159, 501967, 'VIP Box', 'V5'), -- Donald Womp, Dafetendirektour
 (490127, 501234, 'Upper Middle', 'UM45'); -- Gavin Water, Daftendirektour
