@@ -76,7 +76,7 @@ INSERT INTO concert_to_songs (concert_id, song_id, order_performance) VALUES
 (300657, 200968, 1), -- The Fame Ball Tour, Just Dance
 (300657, 200456, 2), -- The Fame Ball Tour, Poker Face
 (300657, 200987, 3), -- The Fame Ball Tour, Paparazzi
-(300468, 200123, 1), -- Pharrell Williams, Get Lucky
+(300173, 200123, 1), -- Pharrell Williams, Get Lucky
 (300468, 200047, 1), -- Daftendirektour, Touch
 (300468, 200374, 2), -- Daftendirektour, Beyond
 (300468, 200503, 3); -- Daftendirektour, Around the World
@@ -86,11 +86,11 @@ INSERT INTO concert_tickets (ticket_id, concert_id, purchase_date, ticket_price)
 (444044, 300458, '2023-12-01', 0.00),
 (465087, 300657, '2009-02-12', 450.50),
 (467890, 300657, '2009-01-10', 999.99),
-(418198, 200123, '2014-07-06', 123.45),
-(419870, 200123, '2014-07-03', 415.90),
-(420167, 200123, '2014-07-02', 290.10),
-(489159, 200047, '1997-09-24', 300.50),
-(490127, 200047, '1997-09-27', 67.80);
+(418198, 300173, '2014-07-06', 123.45),
+(419870, 300173, '2014-07-03', 415.90),
+(420167, 300173, '2014-07-02', 290.10),
+(489159, 300468, '1997-09-24', 300.50),
+(490127, 300468, '1997-09-27', 67.80);
 
 -- int(10), varchar(128), varchar(128), tinyint(3)
 INSERT INTO fans (fan_id, fan_name, fan_email, age) VALUES
