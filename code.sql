@@ -1,3 +1,4 @@
+delimiter // 
 CREATE VIEW concert_stats AS
 SELECT a.artist_id,
        a.artist_name,

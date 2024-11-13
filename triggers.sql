@@ -1,0 +1,13 @@
+DELIMITER //
+CREATE TRIGGER checkagebefore
+BEFORE INSERT ON fans 
+FOR EACH ROW 
+BEGIN
+    IF NEW.age < 16 
+    THEN 
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Age below 16.';
+    END IF;
+END//
+
+DELIMITER ;
