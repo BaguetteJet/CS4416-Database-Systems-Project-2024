@@ -14,7 +14,7 @@ CREATE TABLE albums (
     release_date DATE
 );
 
--- Created junction table for artists & albums 
+-- Created for artists & albums 
 -- (to allow multiple artists per album)
 CREATE TABLE artist_to_album (
     artist_id INTEGER(10),
@@ -77,7 +77,7 @@ CREATE TABLE concert_to_songs (
 -- Created table for fans
 -- (data removed from concert_tickets)
 CREATE TABLE fans (
-    fan_id INTEGER(10) PRIMARY KEY,
+    fan_id INTEGER(10) PRIMARY KEY, -- ADDED primary key
     fan_name VARCHAR(128),
     fan_email VARCHAR(128),
     age TINYINT(3)
