@@ -26,18 +26,18 @@ INSERT INTO artist_to_album (artist_id, album_id) VALUES
 
 -- int(10), int(10), varchar(128), double(minutes), date(yyyy-mm-dd)
 -- REMEMBER ! convert mm:ss to decimal, NOT mm.ss ! ! ! example 3:58 -> 3.97
--- ***if we're adding the song_to_album table, remove album_id from here
-INSERT INTO songs (song_id, album_id, song_title, length, release_date) VALUES
-(200968, 623490, 'Just Dance', 4.03, '2008-04-08'),
-(200456, 623490, 'Poker Face', 3.97, '2008-09-23'),
-(200987, 623490, 'Paparazzi', 3.48, '2009-07-06'),
-(200353, 632759, 'Remember me?', 3.63, '2000-05-23'),
-(200454, 617654, 'Godzilla', 3.50, '2020-01-31'),
-(200305, 653956, 'Venom', 4.48, '2018-09-21'),
-(200123, 683219, 'Get Lucky', 6.15, '2013-04-19'),
-(200374, 683219, 'Beyond', 4.83, '2013-04-30'),
-(200047, 683219, 'Touch', 8.32, '2013-05-17'),
-(200503, 645935, 'Around the World', 5.15, '1997-04-07');
+-- removed album_id from here
+INSERT INTO songs (song_id, song_title, length, release_date) VALUES
+(200968, 'Just Dance', 4.03, '2008-04-08'),
+(200456, 'Poker Face', 3.97, '2008-09-23'),
+(200987, 'Paparazzi', 3.48, '2009-07-06'),
+(200353, 'Remember me?', 3.63, '2000-05-23'),
+(200454, 'Godzilla', 3.50, '2020-01-31'),
+(200305, 'Venom', 4.48, '2018-09-21'),
+(200123, 'Get Lucky', 6.15, '2013-04-19'),
+(200374, 'Beyond', 4.83, '2013-04-30'),
+(200047, 'Touch', 8.32, '2013-05-17'),
+(200503, 'Around the World', 5.15, '1997-04-07');
 
 -- int(10), int(10)
 INSERT INTO artist_to_song (artist_id, song_id) VALUES
