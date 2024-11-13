@@ -26,6 +26,7 @@ INSERT INTO artist_to_album (artist_id, album_id) VALUES
 
 -- int(10), int(10), varchar(128), double(minutes), date(yyyy-mm-dd)
 -- REMEMBER ! convert mm:ss to decimal, NOT mm.ss ! ! ! example 3:58 -> 3.97
+-- ***if we're adding the song_to_album table, remove album_id from here
 INSERT INTO songs (song_id, album_id, song_title, length, release_date) VALUES
 (200968, 623490, 'Just Dance', 4.03, '2008-04-08'),
 (200456, 623490, 'Poker Face', 3.97, '2008-09-23'),
@@ -53,6 +54,21 @@ INSERT INTO artist_to_song (artist_id, song_id) VALUES
 (290065, 200123), -- Pharrell Williams, Get Lucky
 (290934, 200374), -- Paul Williams, Beyond
 (290934, 200047); -- Paul Williams, Touch
+
+/*
+-- int(10), int(10)
+INSERT INTO song_to_album (song_id, album_id) VALUES
+(200968, 623490), -- Just Dance, The Fame
+(200456, 623490), -- Poker Face, The Fame
+(200987, 623490), -- Paparazzi, The Fame
+(200353, 632759), -- Remember me?, The Marshall Mathers LP
+(200454, 617654), -- Godzilla, Music to Be Murdered By
+(200305, 653956), -- Venom, Kamikaze
+(200123, 683219), -- Get Lucky, Random Access Memories
+(200374, 683219), -- Beyond, Random Access Memories
+(200047, 683219), -- Touch, Random Access Memories
+(200503, 645935); -- Around the World, Homework
+*/
 
 -- int(10), varchar(256), varchar(256), date(yyyy-mm-dd)
 INSERT INTO concerts (concert_id, concert_title, location, date_of_concert) VALUES
