@@ -55,7 +55,6 @@ INSERT INTO artist_to_song (artist_id, song_id) VALUES
 (290934, 200374), -- Paul Williams, Beyond
 (290934, 200047); -- Paul Williams, Touch
 
-/*
 -- int(10), int(10)
 INSERT INTO song_to_album (song_id, album_id) VALUES
 (200968, 623490), -- Just Dance, The Fame
@@ -68,7 +67,7 @@ INSERT INTO song_to_album (song_id, album_id) VALUES
 (200374, 683219), -- Beyond, Random Access Memories
 (200047, 683219), -- Touch, Random Access Memories
 (200503, 645935); -- Around the World, Homework
-*/
+
 
 -- int(10), varchar(256), varchar(256), date(yyyy-mm-dd)
 INSERT INTO concerts (concert_id, concert_title, location, date_of_concert) VALUES

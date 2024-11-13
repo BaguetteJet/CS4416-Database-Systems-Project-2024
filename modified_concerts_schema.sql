@@ -44,17 +44,15 @@ CREATE TABLE artist_to_song (
     FOREIGN KEY (song_id) REFERENCES songs(song_id) -- link
 );
 
-
--- Created for albums & songs
+-- Created for songs & albums
 -- (to allow songs to be on multiple albums)
-CREATE TABLE album_to_song (
-    album_id INTEGER(10),
+CREATE TABLE song_to_album (
     song_id INTEGER(10),
-    PRIMARY KEY (album_id, song_id),
-    FOREIGN KEY (album_id) REFERENCES albums(album_id),
-    FOREIGN KEY (song_id) REFERENCES songs(song_id)
+    album_id INTEGER(10),
+    PRIMARY KEY (song_id, album_id),
+    FOREIGN KEY (song_id) REFERENCES songs(song_id),
+    FOREIGN KEY (album_id) REFERENCES albums(album_id)
 );
-
 
 -- Altered concerts
 CREATE TABLE concerts (
