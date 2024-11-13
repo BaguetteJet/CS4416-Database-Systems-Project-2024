@@ -27,7 +27,7 @@ CREATE TABLE artist_to_album (
 -- Altered songs
 CREATE TABLE songs (
     song_id INTEGER(10) PRIMARY KEY, -- ADDED primary key
-    album_id INTEGER(10), -- can remove this to implement the song_to_album table
+    -- can remove this to implement the song_to_album table
     song_title VARCHAR(128),
     length REAL,
     release_date DATE,  
@@ -44,17 +44,17 @@ CREATE TABLE artist_to_song (
     FOREIGN KEY (song_id) REFERENCES songs(song_id) -- link
 );
 
-/*
--- Created for songs & albums
+
+-- Created for albums & songs
 -- (to allow songs to be on multiple albums)
-CREATE TABLE song_to_album (
-    song_id INTEGER(10),
+CREATE TABLE album_to_song (
     album_id INTEGER(10),
-    PRIMARY KEY (song_id, album_id),
-    FOREIGN KEY (song_id) REFERENCES songs(song_id),
-    FOREIGN KEY (album_id) REFERENCES albums(album_id)
+    song_id INTEGER(10),
+    PRIMARY KEY (album_id, song_id),
+    FOREIGN KEY (album_id) REFERENCES albums(album_id),
+    FOREIGN KEY (song_id) REFERENCES songs(song_id)
 );
-*/
+
 
 -- Altered concerts
 CREATE TABLE concerts (
