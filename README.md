@@ -27,11 +27,11 @@ albums, at least 2 concerts ad at least 2 fans who have purchased tickets for co
 ## Task 2 | ... - ???
 Draw an entity-relationship diagram (ERD) for the modified schema using crow’s foot notation.
 
-## Task 3 | ... - ???
+## Task 3 | ... - Ciaran
 Create a view for the modified schema. The view must use a join and both GROUP BY and 
 HAVING clauses. Aim at demonstrating advanced SQL skills. 
 
-## Task 4 | ... - ???
+## Task 4 | ... - Igor
 Write one BEFORE and one AFTER trigger for the modified schema.
 
 ## Task 5 | ... - ???
