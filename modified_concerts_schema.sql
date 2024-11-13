@@ -27,11 +27,11 @@ CREATE TABLE artist_to_album (
 -- Altered songs
 CREATE TABLE songs (
     song_id INTEGER(10) PRIMARY KEY, -- ADDED primary key
-    -- can remove this to implement the song_to_album table
+    -- album_id INTEGER(10), -- REMOVED column
     song_title VARCHAR(128),
     length REAL,
-    release_date DATE,  
-    FOREIGN KEY (album_id) REFERENCES albums(album_id) -- ADDED link
+    release_date DATE 
+    -- FOREIGN KEY (album_id) REFERENCES albums(album_id) -- REMOVED album_id
 );
 
 -- Created for artists & songs 
