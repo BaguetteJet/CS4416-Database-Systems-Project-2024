@@ -16,3 +16,35 @@ FROM artists a
 JOIN artist_to_concert atc ON a.artist_id = atc.artist_id
 GROUP BY a.artist_id, a.artist_name
 HAVING time_played_for > 11.5;
+
+-- Task 6: Procedure
+DELIMITER //
+CREATE PROCEDURE AddSongAlbumAssoc(IN this_song_id INTEGER(10), IN this_album_id INTEGER(10))
+BEGIN
+       DECLARE assocExists INTEGER;
+    DECLARE song_release_date DATE;
+    DECLARE album_release_date DATE;
+    
+    SELECT COUNT(*) INTO assocExists
+    FROM song_to_album
+    WHERE song_id = this_song_id AND album_id = this_album_id;
+    
+    IF assocExists = 0 THEN
+        INSERT INTO song_to_album(song_id, album_id)
+        VALUES(this_song_id, this_album_id);
+        
+        SELECT release_date INTO song_release_date
+        FROM songs
+        WHERE song_id = this_song_id;
+        
+        SELECT release_date INTO album_release_date
+        FROM albums
+        WHERE album_id = this_album_id;
+        
+        IF song_release_date > album_release_date
+        THEN UPDATE songs
+        	SET release_date = album_release_date
+            WHERE song_id = this_song_id;
+        END IF;
+	END IF;
+END//
