@@ -12,3 +12,5 @@ BEGIN
 
     RETURN total_seats; -- Return the total seat count
 END;
+
+-- Change delimiter to ; //
