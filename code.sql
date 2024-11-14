@@ -1,4 +1,5 @@
-delimiter // 
+DELIMITER //
+-- Task 3: Create a View 
 CREATE VIEW concert_stats AS
 SELECT a.artist_id,
        a.artist_name,
@@ -17,8 +18,30 @@ JOIN artist_to_concert atc ON a.artist_id = atc.artist_id
 GROUP BY a.artist_id, a.artist_name
 HAVING time_played_for > 11.5;
 
+-- Task 4: Before and After Tiggers
+CREATE TRIGGER CheckAge
+BEFORE INSERT ON fans 
+FOR EACH ROW 
+BEGIN
+    -- if age of new fan is under 16
+    IF NEW.age < 16 
+    THEN 
+        -- throw error
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Age below 16.';
+    END IF;
+END//
+
+CREATE TRIGGER DeleteTicket
+AFTER DELETE ON concert_tickets
+FOR EACH ROW
+BEGIN
+    -- delete entries in ticket_to_fan for matching ticket_id
+    DELETE FROM ticket_to_fan
+    WHERE ticket_id = OLD.ticket_id;
+END //
+
 -- Task 6: Procedure
-DELIMITER //
 CREATE PROCEDURE AddSongAlbumAssoc(IN this_song_id INTEGER(10), IN this_album_id INTEGER(10))
 BEGIN
     -- create variables
