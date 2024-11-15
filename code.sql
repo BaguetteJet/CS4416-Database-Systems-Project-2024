@@ -19,7 +19,7 @@ GROUP BY a.artist_id, a.artist_name
 HAVING time_played_for > 11.5;
 
 -- Task 4: Before and After Tiggers
-CREATE TRIGGER CheckAge
+CREATE TRIGGER CheckAge -- Before Trigger
 BEFORE INSERT ON fans 
 FOR EACH ROW 
 BEGIN
@@ -32,7 +32,7 @@ BEGIN
     END IF;
 END//
 
-CREATE TRIGGER DeleteTicket
+CREATE TRIGGER DeleteTicket -- After Trigger
 AFTER DELETE ON concert_tickets
 FOR EACH ROW
 BEGIN
