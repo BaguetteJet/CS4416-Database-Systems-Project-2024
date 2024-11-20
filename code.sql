@@ -1,4 +1,3 @@
-DELIMITER //
 -- Task 3: Create a View 
 CREATE VIEW concert_stats AS
 SELECT a.artist_id,
@@ -18,6 +17,7 @@ JOIN artist_to_concert atc ON a.artist_id = atc.artist_id
 GROUP BY a.artist_id, a.artist_name
 HAVING time_played_for > 11.5;
 
+DELIMITER //
 -- Task 4: Before and After Tiggers
 CREATE TRIGGER CheckAge -- Before Trigger
 BEFORE INSERT ON fans 
@@ -39,7 +39,23 @@ BEGIN
     -- delete entries in ticket_to_fan for matching ticket_id
     DELETE FROM ticket_to_fan
     WHERE ticket_id = OLD.ticket_id;
-END //
+END//
+
+-- Task 5: Stored function
+CREATE FUNCTION calculate_occupied_seats (input_concert_id INT) -- Creates Function
+RETURNS INT -- Function gives back an integer
+NOT DETERMINISTIC -- Makes the function be able change based on data in the database
+BEGIN
+    DECLARE total_seats INT DEFAULT	0; -- Initalise local variable to 0
+
+    -- Calculate the number of seats associated with all tickets for the given concert
+    SELECT COUNT(tf.seat_number) -- Counts the number of seats in ticket_to_fan
+    INTO total_seats -- stores in local variable total_seats
+    FROM concert_tickets AS ct JOIN ticket_to_fan AS tf ON ct.ticket_id = sa.ticket_id -- Joins concert_tickets and ticket_to_fan for the corresponding ticket_id
+    WHERE ct.concert_id = input_concert_id; -- where the inputted concert_id is equal to the concert_id in concert_tickets
+
+    RETURN total_seats; -- Return the total seat count
+END//
 
 -- Task 6: Procedure
 CREATE PROCEDURE AddSongAlbumAssoc(IN this_song_id INTEGER(10), IN this_album_id INTEGER(10))

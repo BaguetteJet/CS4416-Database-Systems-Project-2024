@@ -11,6 +11,6 @@ BEGIN
     WHERE ct.concert_id = input_concert_id; -- where the inputted concert_id is equal to the concert_id in concert_tickets
 
     RETURN total_seats; -- Return the total seat count
-END;
+END//
 
 -- Change delimiter to ; //
