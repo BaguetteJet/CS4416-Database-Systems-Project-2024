@@ -93,7 +93,7 @@ CREATE TABLE fans (
 );
 
 -- Created table for fans & favorite artists 
--- (multiple favorite artists per fan)
+-- (to allow multiple favorite artists per fan)
 CREATE TABLE fan_to_favorite_artist_id (
     fan_id INTEGER(10),
     favorite_artist_id INTEGER(10),
@@ -102,7 +102,7 @@ CREATE TABLE fan_to_favorite_artist_id (
     FOREIGN KEY (favorite_artist_id) REFERENCES artists(artist_id) -- link
 );
 
--- Table for tickets (shared tickets)
+-- Altered table for concert tickets (shared tickets)
 CREATE TABLE concert_tickets (
     ticket_id INTEGER(10) PRIMARY KEY, -- ADDED primary key
     concert_id INTEGER(10),
@@ -118,7 +118,8 @@ CREATE TABLE concert_tickets (
     FOREIGN KEY (concert_id) REFERENCES concerts(concert_id) -- link
 );
 
--- Created table table for fans and tickets (multiple fans per ticket)
+-- Created table table for fans and tickets 
+-- (to allow multiple fans per ticket)
 CREATE TABLE ticket_to_fan (
     ticket_id INTEGER(10),
     fan_id INTEGER(10),
