@@ -23,12 +23,12 @@ CREATE TRIGGER CheckAge -- Before Trigger
 BEFORE INSERT ON fans 
 FOR EACH ROW 
 BEGIN
-    -- if age of new fan is under 16
+    -- check if age of new fan is under 16
     IF NEW.age < 16 
     THEN 
-        -- throw error
+        -- throw error and do not add data
         SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Age below 16.';
+        SET MESSAGE_TEXT = 'TRIGGER: Age below 16.';
     END IF;
 END//
 

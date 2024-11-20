@@ -9,7 +9,7 @@ BEGIN
     THEN 
         -- throw error
         SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Age below 16.';
+        SET MESSAGE_TEXT = 'TRIGGER: Age below 16.';
     END IF;
 END//
 

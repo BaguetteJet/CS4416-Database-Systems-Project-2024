@@ -113,7 +113,7 @@ INSERT INTO fans (fan_id, fan_name, fan_email, age) VALUES
 (508976, 'Michael French', 'bigj04@outlook.com', 43),
 (501967, 'Donald Womp', 'mrpresnr1@mail.us', 78),
 (502374, 'Lewis Kubica', 'lew4kub@gmail.com', 36),
-(507454, 'David Guilfoyle', 'davidg13@gmail.com', 20);
+(507454, 'David Guilfoyle', 'davidg13@gmail.com', 16);
 
 -- int(10), int(10)
 INSERT INTO fan_to_favorite_artist_id (fan_id, favorite_artist_id) VALUES

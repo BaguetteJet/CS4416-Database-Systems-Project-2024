@@ -31,7 +31,6 @@ CREATE TABLE songs (
     song_title VARCHAR(128),
     length REAL,
     release_date DATE 
-    -- FOREIGN KEY (album_id) REFERENCES albums(album_id) -- REMOVED album_id
 );
 
 -- Created for artists & songs 
@@ -119,7 +118,7 @@ CREATE TABLE concert_tickets (
     FOREIGN KEY (concert_id) REFERENCES concerts(concert_id) -- link
 );
 
--- Junction table for fans and tickets (multiple fans per ticket)
+-- Created table table for fans and tickets (multiple fans per ticket)
 CREATE TABLE ticket_to_fan (
     ticket_id INTEGER(10),
     fan_id INTEGER(10),
