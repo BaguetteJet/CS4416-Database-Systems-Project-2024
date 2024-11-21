@@ -1,4 +1,5 @@
 -- Task 3: Create a View 
+
 CREATE VIEW concert_stats AS
 SELECT a.artist_id,
        a.artist_name,
@@ -18,21 +19,23 @@ GROUP BY a.artist_id, a.artist_name
 HAVING time_played_for > 11.5;
 
 DELIMITER //
+
 -- Task 4: Before and After Tiggers
-CREATE TRIGGER CheckAge -- Before Trigger
-BEFORE INSERT ON fans 
-FOR EACH ROW 
+
+CREATE TRIGGER CheckAge -- checks age before inserting data, throws error is under 16
+BEFORE INSERT ON fans
+FOR EACH ROW
 BEGIN
     -- check if age of new fan is under 16
     IF NEW.age < 16 
     THEN 
-        -- throw error and do not add data
+        -- throw ERROR and do not add data
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'TRIGGER: Age below 16.';
     END IF;
 END//
 
-CREATE TRIGGER DeleteTicket -- After Trigger
+CREATE TRIGGER DeleteTicket -- deletes all ticket data after ticket deletion
 AFTER DELETE ON concert_tickets
 FOR EACH ROW
 BEGIN
@@ -42,6 +45,7 @@ BEGIN
 END//
 
 -- Task 5: Stored function
+
 CREATE FUNCTION calculate_occupied_seats (input_concert_id INT) -- Creates Function
 RETURNS INT -- Function gives back an integer
 NOT DETERMINISTIC -- Makes the function be able change based on data in the database
@@ -58,6 +62,7 @@ BEGIN
 END//
 
 -- Task 6: Procedure
+
 CREATE PROCEDURE AddSongAlbumAssoc(IN this_song_id INTEGER(10), IN this_album_id INTEGER(10))
 BEGIN
     -- create variables
