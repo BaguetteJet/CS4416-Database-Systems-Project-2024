@@ -1,7 +1,8 @@
 CREATE VIEW concert_stats AS
-SELECT a.artist_id,
-       a.artist_name,
-       (SELECT ROUND(SUM(DISTINCT s.length), 2)
+SELECT a.artist_id, -- Gets artistID
+       a.artist_name, -- Gets artists name
+       
+       (SELECT ROUND(SUM(DISTINCT s.length), 2) 
         FROM artist_to_song ats
         JOIN songs s ON ats.song_id = s.song_id
         WHERE ats.artist_id = a.artist_id) AS total_time_played_for,
