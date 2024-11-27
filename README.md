@@ -15,29 +15,29 @@ Propose a modified schema to eliminate data redundancy and support:
 - multiple favourite artists per fan 
 - shared tickets, i.e. multiple fans per ticket_id
   
-**> part 2** - Igor  
+**> part 2** | DONE - Igor  
 Write all CREATE TABLE statements for the modified schema, including PRIMARY KEY and 
 FOREIGN KEY constraints, and save them in modified_concerts_schema.sql.  
   
-**> part 3** - Igor  
+**> part 3** - | DONE - Igor  
 In a separate file named data.sql, provide INSERT INTO statements for inserting some data into 
 the tables of the modified schema. Please provide data for at least two artists, at least two 
 albums, at least 2 concerts ad at least 2 fans who have purchased tickets for concerts.
 
-## Task 2 | ... - ???
+## Task 2 | DONE - LUKE
 Draw an entity-relationship diagram (ERD) for the modified schema using crow’s foot notation.
 
-## Task 3 | ... - Ciaran
+## Task 3 | DONE - Ciaran
 Create a view for the modified schema. The view must use a join and both GROUP BY and 
 HAVING clauses. Aim at demonstrating advanced SQL skills. 
 
-## Task 4 | ... - Igor
+## Task 4 | DONE - Igor
 Write one BEFORE and one AFTER trigger for the modified schema.
 
-## Task 5 | ... - ???
+## Task 5 | DONE - LUKE
 Write a stored function that returns the total number of occupied seats for a given concert_id. 
 
-## Task 6 | ... - ???
+## Task 6 | DONE - EMILY
 Write a stored procedure that checks whether a given song_id is associated with a given 
 album_id. If not, insert this association into the database. Additionally, adjust the song’s release 
 date if it is later than the album’s.
