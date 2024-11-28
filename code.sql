@@ -78,7 +78,7 @@ BEGIN
     DECLARE song_release_date DATE;
     DECLARE album_release_date DATE;
     
-    -- check if the association already exists
+    -- check if the association already exists by adding matches to the assocExists variables
     SELECT COUNT(*) INTO assocExists
     FROM song_to_album
     WHERE song_id = this_song_id AND album_id = this_album_id;
