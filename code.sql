@@ -28,7 +28,7 @@ HAVING total_time_played_for > 7; -- Only includes artists that have significant
 
 DELIMITER //
 
--- Task 4: Before and After Tiggers
+-- Task 4: Before and After Triggers
 
 CREATE TRIGGER CheckAge -- checks age before inserting data, throws error is under 16
 BEFORE INSERT ON fans
@@ -56,7 +56,7 @@ END//
 
 CREATE FUNCTION calculate_occupied_seats (input_concert_id INT) -- Creates Function
 RETURNS INT -- Function gives back an integer
-NOT DETERMINISTIC -- Makes the function be able change based on data in the database
+NOT DETERMINISTIC -- Makes the function able to change based on data in the database
 BEGIN
     DECLARE total_seats INT DEFAULT	0; -- Initalise local variable to 0
 
@@ -78,7 +78,7 @@ BEGIN
     DECLARE song_release_date DATE;
     DECLARE album_release_date DATE;
     
-    -- check if the association already exists by adding matches to the assocExists variables
+    -- check if the association already exists
     SELECT COUNT(*) INTO assocExists
     FROM song_to_album
     WHERE song_id = this_song_id AND album_id = this_album_id;
@@ -108,3 +108,4 @@ BEGIN
         END IF;
 	END IF;
 END//
+
