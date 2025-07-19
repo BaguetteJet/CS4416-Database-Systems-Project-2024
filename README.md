@@ -1,5 +1,7 @@
 # CS4416-Database-Systems-Project-2024
 
+## GRADE: 17.5/20 87.5 %
+
 ## DEADLINE 18:00 on Friday week 12
 <img src="https://i.countdownmail.com/3p1e6t.gif" border="0" alt="countdownmail.com"/>
   
